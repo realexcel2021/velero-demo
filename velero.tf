@@ -9,6 +9,7 @@ module "s3_bucket" {
 
   bucket = "valero-bucket-${random_string.random.result}"
   acl    = "private"
+  force_destroy = true
 
   control_object_ownership = true
   object_ownership         = "ObjectWriter"
